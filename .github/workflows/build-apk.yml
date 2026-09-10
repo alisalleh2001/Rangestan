@@ -3,7 +3,7 @@ name: Build Rangestan APK
 on:
   push:
     branches:
-      - main # اگر شاخه اصلی شما master است، این عبارت را به master تغییر دهید
+      - main # اگر نام شاخه اصلی شما master است، آن را به master تغییر دهید
   workflow_dispatch:
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
           java-version: '17'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Build Web Assets
         run: npm run build
